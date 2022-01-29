@@ -9,6 +9,7 @@ const searchModule = (() => {
       const res = await fetch(BASE_URL + '?q=' + query)
       const result = await res.json()
 
+
       let body = ""
 
       for (let i=0; i < result.length; i++) {

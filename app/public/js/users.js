@@ -80,9 +80,9 @@ const usersModule = (() => {
       const res = await fetch(BASE_URL + "/" + uid)
       const resJson = await res.json()
 
-      document.getElementById('name').value = resJson.name
-      document.getElementById('profile').value = resJson.profile
-      document.getElementById('date-of-birth').value = resJson.date_of_birth
+      document.getElementById('name').value = resJson[0].name
+      document.getElementById('profile').value = resJson[0].profile
+      document.getElementById('date-of-birth').value = resJson[0].date_of_birth
     },
     saveUser: async (uid) => {
       const name = document.getElementById("name").value
